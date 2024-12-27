@@ -17,8 +17,8 @@
 
 .filters .filter-item {
   display: flex;
-  align-items: center; /* Align checkbox and label */
-  margin-bottom: 10px; /* Add spacing between filter items */
+  align-items: center; 
+  margin-bottom: 10px; 
 }
 
 .filters .filter-item input {
@@ -48,10 +48,12 @@
   display: flex;
   gap: 20px;
   margin-top: 20px;
+  padding-right: 20px; 
 }
 
 .projects {
   flex: 1;
+  padding-right: 20px;
 }
 
 /* Projects Grid */
