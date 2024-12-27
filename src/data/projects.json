@@ -30,5 +30,45 @@
       "logo": "/images/Logos/Slap! Dodge! Grab!.png",
       "engine": ["Unity", "C#"],
       "platforms": ["Mobile"]
+    },
+    {
+      "id": 5,
+      "name": "Basket Hoop",
+      "date": "April 2023",
+      "logo": "/images/Logos/Basket Hoop.png",
+      "engine": ["Unity", "C#"],
+      "platforms": ["Mobile"]
+    },
+    {
+      "id": 6,
+      "name": "Circuit Evolution",
+      "date": "March 2023",
+      "logo": "/images/Logos/Circuit Evolution.png",
+      "engine": ["Unity", "C#"],
+      "platforms": ["Mobile"]
+    },
+    {
+      "id": 7,
+      "name": "Eco Empire",
+      "date": "June 2024",
+      "logo": "/images/Logos/Eco Empire.png",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"]
+    },
+    {
+      "id": 8,
+      "name": "Urban Tycoon Inn",
+      "date": "June 2024",
+      "logo": "/images/Logos/Urban Tycoon Inn.png",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"]
+    },
+    {
+      "id": 9,
+      "name": "Card Quest",
+      "date": "June 2024",
+      "logo": "/images/Logos/Card Quest.png",
+      "engine": ["Unity", "C#"],
+      "platforms": ["Mobile"]
     }
   ]  
