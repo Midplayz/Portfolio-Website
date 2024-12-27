@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import Layout from "../components/layout";
-import projectData from "../data/projects.json"; // Import JSON data
+import Layout from "../components/Layout";
+import projectData from "../data/projects.json";
 import "./projects.css";
 
 const ProjectsPage = () => {
   const [filters, setFilters] = useState({ engine: [], platform: [] });
   const [currentPage, setCurrentPage] = useState(1);
 
-  const itemsPerPage = 5;
+  const itemsPerPage = 20;
 
-  // Filter logic
   const filteredProjects = projectData.filter((project) => {
-    if (filters.engine.length && !filters.engine.some(e => project.engine.includes(e))) return false;
-    if (filters.platform.length && !filters.platform.some(p => project.platforms.includes(p))) return false;
+    if (filters.engine.length && !filters.engine.some((e) => project.engine.includes(e))) return false;
+    if (filters.platform.length && !filters.platform.some((p) => project.platforms.includes(p))) return false;
     return true;
   });
 
@@ -30,38 +29,52 @@ const ProjectsPage = () => {
             <h3>Filters</h3>
             <div>
               <h4>Game Engine</h4>
-              <input type="checkbox" id="unity" value="Unity" onChange={(e) => handleFilterChange(e, "engine")} />
-              <label htmlFor="unity">Unity</label>
-              <input type="checkbox" id="unreal" value="Unreal Engine" onChange={(e) => handleFilterChange(e, "engine")} />
-              <label htmlFor="unreal">Unreal Engine</label>
+              <div className="filter-item">
+                <input type="checkbox" id="unity" value="Unity" onChange={(e) => handleFilterChange(e, "engine")} />
+                <label htmlFor="unity">Unity</label>
+              </div>
+              <div className="filter-item">
+                <input type="checkbox" id="unreal" value="Unreal Engine" onChange={(e) => handleFilterChange(e, "engine")} />
+                <label htmlFor="unreal">Unreal Engine</label>
+              </div>
             </div>
             <div>
               <h4>Platform</h4>
-              <input type="checkbox" id="pc" value="PC" onChange={(e) => handleFilterChange(e, "platform")} />
-              <label htmlFor="pc">PC</label>
-              <input type="checkbox" id="mobile" value="Mobile" onChange={(e) => handleFilterChange(e, "platform")} />
-              <label htmlFor="mobile">Mobile</label>
+              <div className="filter-item">
+                <input type="checkbox" id="pc" value="PC" onChange={(e) => handleFilterChange(e, "platform")} />
+                <label htmlFor="pc">PC</label>
+              </div>
+              <div className="filter-item">
+                <input type="checkbox" id="mobile" value="Mobile" onChange={(e) => handleFilterChange(e, "platform")} />
+                <label htmlFor="mobile">Mobile</label>
+              </div>
             </div>
             <button onClick={clearFilters}>Clear Filters</button>
           </aside>
 
-          {/* Project Cards */}
+          {/* Projects Grid */}
           <section className="projects">
             <h1>My Projects</h1>
-            {paginatedProjects.map((project) => (
-              <div key={project.id} className="project-card">
-                <img src={project.logo} alt={`${project.name} logo`} />
-                <div className="project-info">
-                  <h2>{project.name}</h2>
-                  <p>{project.date}</p>
-                  <div className="tags">
-                    {project.engine.map((e) => <span key={e}>{e}</span>)}
-                    {project.platforms.map((p) => <span key={p}>{p}</span>)}
+            <div className="projects-grid">
+              {paginatedProjects.map((project) => (
+                <div key={project.id} className="project-card">
+                  <img src={project.logo} alt={`${project.name} logo`} />
+                  <div className="project-info">
+                    <h2>{project.name}</h2>
+                    <p>{project.date}</p>
+                    <div className="tags">
+                      {project.engine.map((e) => (
+                        <span key={e}>{e}</span>
+                      ))}
+                      {project.platforms.map((p) => (
+                        <span key={p}>{p}</span>
+                      ))}
+                    </div>
                   </div>
+                  <a href="#" className="view-more">View More</a>
                 </div>
-                <a href="#" className="view-more">View More</a>
-              </div>
-            ))}
+              ))}
+            </div>
             {/* Pagination */}
             <div className="pagination">
               {Array.from({ length: Math.ceil(filteredProjects.length / itemsPerPage) }).map((_, idx) => (
