@@ -1,0 +1,73 @@
+.projects-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .filters {
+    width: 20%;
+    background-color: #272727;
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .filters h3,
+  .filters h4 {
+    margin-bottom: 10px;
+  }
+  
+  .filters input {
+    margin-right: 10px;
+  }
+  
+  .projects {
+    width: 75%;
+  }
+  
+  .project-card {
+    display: flex;
+    gap: 20px;
+    background-color: #383838;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .project-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+  }
+  
+  .project-info {
+    flex: 1;
+  }
+  
+  .project-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #FFE400;
+  }
+  
+  .tags span {
+    background-color: #FF652F;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+  
+  .pagination button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #272727;
+    color: #FFFFFF;
+    border: 1px solid #747474;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #FF652F;
+  }
+  

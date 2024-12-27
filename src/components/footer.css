@@ -1,0 +1,17 @@
+.footer {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: #272727;
+    color: #FFFFFF; 
+    padding: 10px;
+    border-top: 2px solid #747474; 
+    font-size: 1rem; 
+    height: auto; 
+    text-align: center; 
+  }
+  
+  .footer .highlight {
+    color: #FFE400; 
+    font-weight: 600; 
+  }  
