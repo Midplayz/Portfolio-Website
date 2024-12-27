@@ -30,27 +30,62 @@ const ProjectsPage = () => {
             <div>
               <h4>Game Engine</h4>
               <div className="filter-item">
-                <input type="checkbox" id="unity" value="Unity" onChange={(e) => handleFilterChange(e, "engine")} />
+                <input
+                  type="checkbox"
+                  id="unity"
+                  value="Unity"
+                  checked={filters.engine.includes("Unity")}
+                  onChange={(e) => handleFilterChange(e, "engine")}
+                />
                 <label htmlFor="unity">Unity</label>
               </div>
               <div className="filter-item">
-                <input type="checkbox" id="unreal" value="Unreal Engine" onChange={(e) => handleFilterChange(e, "engine")} />
+                <input
+                  type="checkbox"
+                  id="unreal"
+                  value="Unreal Engine"
+                  checked={filters.engine.includes("Unreal Engine")}
+                  onChange={(e) => handleFilterChange(e, "engine")}
+                />
                 <label htmlFor="unreal">Unreal Engine</label>
+              </div>
+              <div className="filter-item">
+                <input
+                  type="checkbox"
+                  id="godot"
+                  value="Godot"
+                  checked={filters.engine.includes("Godot")}
+                  onChange={(e) => handleFilterChange(e, "engine")}
+                />
+                <label htmlFor="godot">Godot</label>
               </div>
             </div>
             <div>
               <h4>Platform</h4>
               <div className="filter-item">
-                <input type="checkbox" id="pc" value="PC" onChange={(e) => handleFilterChange(e, "platform")} />
+                <input
+                  type="checkbox"
+                  id="pc"
+                  value="PC"
+                  checked={filters.platform.includes("PC")}
+                  onChange={(e) => handleFilterChange(e, "platform")}
+                />
                 <label htmlFor="pc">PC</label>
               </div>
               <div className="filter-item">
-                <input type="checkbox" id="mobile" value="Mobile" onChange={(e) => handleFilterChange(e, "platform")} />
+                <input
+                  type="checkbox"
+                  id="mobile"
+                  value="Mobile"
+                  checked={filters.platform.includes("Mobile")}
+                  onChange={(e) => handleFilterChange(e, "platform")}
+                />
                 <label htmlFor="mobile">Mobile</label>
               </div>
             </div>
             <button onClick={clearFilters}>Clear Filters</button>
           </aside>
+
 
           {/* Projects Grid */}
           <section className="projects">
