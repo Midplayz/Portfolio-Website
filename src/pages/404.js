@@ -1,15 +1,27 @@
-import * as React from "react"
-
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/Layout";
+import Seo from "../components/seo";
+import "./404.css";
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className="not-found-page">
+      <div className="error-container">
+        <h1>404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>
+          The page you're looking for doesn't exist. You might have mistyped
+          the URL or the page has been moved.
+        </p>
+        <Link to="/" className="go-home-button">
+          Go Back Home
+        </Link>
+      </div>
+    </div>
   </Layout>
-)
+);
 
-export const Head = () => <Seo title="404: Not Found" />
+export const Head = () => <Seo title="404: Not Found" />;
 
-export default NotFoundPage
+export default NotFoundPage;

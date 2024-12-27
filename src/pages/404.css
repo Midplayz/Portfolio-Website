@@ -1,0 +1,51 @@
+.not-found-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 140px); /* Adjusting height for navbar and footer */
+    background-color: #272727;
+    color: #ffe400;
+    text-align: center;
+    padding: 20px;
+}
+
+.error-container {
+    max-width: 600px;
+}
+
+.error-container h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #ff652f;
+    margin-bottom: 20px;
+}
+
+.error-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffe400;
+}
+
+.error-container p {
+    font-size: 1.2rem;
+    color: #747474;
+    margin-bottom: 30px;
+}
+
+.go-home-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #14a76c;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-home-button:hover {
+    background-color: #ff652f;
+    transform: scale(1.05);
+}
