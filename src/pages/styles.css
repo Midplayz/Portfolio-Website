@@ -22,35 +22,111 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: calc(100vh - 150px); /* Adjusted height */
   text-align: center;
+  background: linear-gradient(
+      rgba(39, 39, 39, 0.8),
+      rgba(20, 20, 20, 0.9)
+    ),
+    url("https://wallpapercat.com/w/full/8/b/d/1500819-1920x1200-desktop-hd-shooter-game-background.jpg") no-repeat
+      center center;
+  background-size: cover;
 }
 
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #FFE400;
+  color: #ffe400; /* Bright yellow for visibility */
+  margin-bottom: 10px;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 20px 0;
-  color: #747474;
+  margin: 15px 0;
+  color: #ffffff; /* White for better contrast */
 }
 
-.cta-button {
+.cta-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cta-button,
+.cta-outline-button {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 600;
-  color: #FFFFFF;
-  background-color: #FF652F;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.cta-button {
+  background-color: #ff652f; /* Orange for a bold call-to-action */
+  color: #ffffff;
+  border: none;
 }
 
 .cta-button:hover {
-  background-color: #14A76C;
+  background-color: #14a76c; /* Green for hover effect */
+}
+
+.cta-outline-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ff652f;
+}
+
+.cta-outline-button:hover {
+  color: #ff652f;
+  background-color: #ffffff;
+}
+
+/* Quick Links Section */
+.quick-links {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #383838; /* Slightly lighter gray for contrast */
+}
+
+.quick-links h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe400; /* Bright yellow for section title */
+  margin-bottom: 20px;
+}
+
+.quick-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quick-link {
+  background-color: #272727; /* Dark gray background */
+  border: 2px solid #747474; /* Border matches muted gray */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.quick-link h3 {
+  font-size: 1.3rem;
+  color: #ff652f; /* Orange for headings */
+  margin-bottom: 10px;
+}
+
+.quick-link p {
+  font-size: 1rem;
+  color: #ffffff; /* White for better contrast */
+}
+
+.quick-link:hover {
+  transform: scale(1.05);
+  border-color: #ff652f; /* Orange border on hover */
 }

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 140px); /* Adjusting height for navbar and footer */
+    min-height: calc(100vh - 140px);
     background-color: #272727;
     color: #ffe400;
     text-align: center;
