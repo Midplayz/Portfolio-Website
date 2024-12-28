@@ -59,6 +59,16 @@ const ProjectsPage = () => {
                 />
                 <label htmlFor="godot">Godot</label>
               </div>
+              <div className="filter-item">
+  <input
+    type="checkbox"
+    id="stencyl"
+    value="Stencyl"
+    checked={filters.engine.includes("Stencyl")}
+    onChange={(e) => handleFilterChange(e, "engine")}
+  />
+  <label htmlFor="stencyl">Stencyl</label>
+</div>
             </div>
             <div>
               <h4>Platform</h4>
@@ -82,6 +92,17 @@ const ProjectsPage = () => {
                 />
                 <label htmlFor="mobile">Mobile</label>
               </div>
+              <div className="filter-item">
+  <input
+    type="checkbox"
+    id="web"
+    value="Web"
+    checked={filters.platform.includes("Web")}
+    onChange={(e) => handleFilterChange(e, "platform")}
+  />
+  <label htmlFor="web">Web</label>
+</div>
+
             </div>
             <button onClick={clearFilters}>Clear Filters</button>
           </aside>

@@ -3,7 +3,7 @@
       "id": 1,
       "name": "vaXinator",
       "date": "November 2024",
-      "logo": "/images/Logos/vaXinator.png",
+      "logo": "/images/logos/vaXinator.avif",
       "engine": [
         "Godot",
         "GDScript"
@@ -12,8 +12,8 @@
         "PC"
       ],
       "slug": "vaXinator",
-      "description": "Defend the body in vaXinator, a fast-paced action roguelike! As the last white blood cell, unleash powerful abilities and antibodies to fight off waves of infections. Test your reflexes in this microscopic battle for survival. How long can you hold the line?",
-      "youtubeEmbed": "https://www.youtube.com/embed/L190UWL934c",
+      "description": "The first game I worked on using the Open Source Engine, Godot 4.0. And this is also the first game I worked on to be published on Steam! It was a very interesting and lucrative experience as I learnt how to use the popular Godot Engine. It also taught me how to integrate Steam SDK!",
+      "youtubeEmbed": "",
       "itchEmbed": "",
       "steamLink": "https://store.steampowered.com/app/3214380/vaXinator/",
       "githubLink": "",
@@ -30,64 +30,366 @@
       "id": 2,
       "name": "Heavenly Hustle",
       "date": "July 2024",
-      "logo": "/images/Logos/Heavenly Hustle.png",
+      "logo": "/images/Logos/Heavenly Hustle.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["PC"]
+      "platforms": ["PC"],
+      "slug": "heavenly-hustle",
+      "description": "This is a project I worked with a designer friend for the WTF x IGDC 2024 Game Jam for the theme of 'Tycoon'. Relevant info on this game can be found on its Itch.io page!",
+      "youtubeEmbed": "",
+      "itchEmbed": "https://itch.io/embed/2848418?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "https://github.com/CobraSage/HeavenlyHustle",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1nLzE3MDM5MzU3LnBuZw==/original/hAZoeo.png"
+      ]
     },
     {
       "id": 3,
       "name": "Plane Wars",
       "date": "June 2023",
-      "logo": "/images/Logos/Plane Wars.png",
+      "logo": "/images/Logos/Plane Wars.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["Mobile"]
+      "platforms": ["Mobile"],
+      "slug": "plane-wars",
+      "description": "This is yet another mobile game I made from scratch for the Whizzy Ants Digital. This was an extremely interesting project as I've always wanted to try Airplane Mechanics. The AI in this game has been trained using UNITY ML. This was also available both on the Play Store and App Store but the company took them down for some reason.",
+      "youtubeEmbed": "",
+      "itchEmbed": "",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+      ]
     },
     {
       "id": 4,
       "name": "Slap! Dodge! Grab!",
       "date": "July 2023",
-      "logo": "/images/Logos/Slap! Dodge! Grab!.png",
+      "logo": "/images/Logos/Slap! Dodge! Grab!.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["Mobile"]
+      "platforms": ["Mobile"],
+      "slug": "slap-dodge-grab",
+      "description": "This is the third title I had to develop for Whizzy Ants Digital. It was a rather simple project that emphasized on visual elements with simple gameplay. Nevertheless, it was a fun experience since it was the first time I had to work with non-humanoid animations. This was also available both on the Play Store and App Store but the company took them down for some reason.",
+      "youtubeEmbed": "",
+      "itchEmbed": "",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+      ]
     },
     {
       "id": 5,
       "name": "Basket Hoop",
       "date": "April 2023",
-      "logo": "/images/Logos/Basket Hoop.png",
+      "logo": "/images/Logos/Basket Hoop.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["Mobile"]
+      "platforms": ["Mobile"],
+      "slug": "basket-hoop",
+      "description": "This is another mobile game I made from scratch for the same company, Whizzy Ants Digital. It was a really fun project since I got to learn a lot of new things. This was also available both on the Play Store and App Store but the company took them down for some reason.",
+      "youtubeEmbed": "",
+      "itchEmbed": "",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+      ]
     },
     {
       "id": 6,
       "name": "Circuit Evolution",
       "date": "March 2023",
-      "logo": "/images/Logos/Circuit Evolution.png",
+      "logo": "/images/Logos/Circuit Evolution.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["Mobile"]
+      "platforms": ["Mobile"],
+      "slug": "circuit-evolution",
+      "description": "This was the first mobile game I made from scratch on Unity. I made this game for Whizzy Ants Digital. The idea was rather simple but the biggest hurdle was generating the road and making the evolutions work as intended. This was also available both on the Play Store and App Store but the company took them down for some reason.",
+      "youtubeEmbed": "",
+      "itchEmbed": "",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+      ]
     },
     {
       "id": 7,
       "name": "Eco Empire",
       "date": "June 2024",
-      "logo": "/images/Logos/Eco Empire.png",
+      "logo": "/images/Logos/Eco Empire.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["PC"]
+      "platforms": ["PC", "Web", "Mobile"],
+      "slug": "eco-empire",
+      "description": "This is a Idle Game Prototype I made as an assignment when I applied for a company. I barely had 1 day to work on it due to time constraints so I tried my best and was able to produce a decent working output for a prototype! I've ensured that it works on PC, Web and on Mobile!",
+      "youtubeEmbed": "",
+      "itchEmbed": "https://itch.io/embed/2804215?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "https://github.com/Midplayz/eco-empire",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+      ]
     },
     {
       "id": 8,
       "name": "Urban Tycoon Inn",
       "date": "June 2024",
-      "logo": "/images/Logos/Urban Tycoon Inn.png",
+      "logo": "/images/Logos/Urban Tycoon Inn.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["PC"]
+      "platforms": ["PC", "Web", "Mobile"],
+      "slug": "urban-tycoon-inn",
+      "description": "This is a Tycoon Game Prototype I made. I modelled some assets using blender and made some textures using Photoshop and Illustrator for this game. It has a fairly simple gameplay loop. It took around 1.5 days to make and complete this game!",
+      "youtubeEmbed": "",
+      "itchEmbed": "https://itch.io/embed/2802277?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "https://github.com/Midplayz/urban-tycoon-inn",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+      ]
     },
     {
       "id": 9,
       "name": "Card Quest",
       "date": "June 2024",
-      "logo": "/images/Logos/Card Quest.png",
+      "logo": "/images/Logos/Card Quest.avif",
       "engine": ["Unity", "C#"],
-      "platforms": ["Mobile"]
+      "platforms": ["Mobile"],
+      "slug": "card-quest",
+      "description": "This is a simple Card Game made for Android as an assessment when applying for a company. It had to showcase my abilities in making a card game hence why I tried to make it as good as I can in the given time period of 48 hours.",
+      "youtubeEmbed": "https://www.youtube.com/embed/NBR-u1FjYFY",
+      "itchEmbed": "https://itch.io/embed/2768773?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "https://github.com/Midplayz/CardQuest",
+      "playstoreLink": "https://play.google.com/store/apps/details?id=com.Midplayz.CardQuest",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEzMC5wbmc=/original/k0cCJc.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEyOS5wbmc=/original/cjKDMD.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEzMS5wbmc=/original/wPHni9.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEyOC5wbmc=/original/3KFslo.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEzMy5wbmc=/original/y2H1Zq.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEzMi5wbmc=/original/U3Kf5L.png"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Chop Fest",
+      "date": "June 2024",
+      "logo": "/images/Logos/Chop Fest.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC", "Mobile"],
+      "slug": "chop-fest",
+      "description": "This is an assessment project I made when I applied to a company. They didn't ask for a complete game loop with win and lose condition so I just made an endless casual game with no restrictions. I completed this game in around 8 hours as I was busy but I do wish I had more time to add more features. I didn't update the game after submission as I want to leave this as a milestone on how much I was able to do in a limited amount of time!",
+      "youtubeEmbed": "https://www.youtube.com/embed/3bh6CmzKEZc",
+      "itchEmbed": "https://itch.io/embed/2768810?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "https://github.com/Midplayz/Chop-Fest",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0NC5wbmc=/original/1%2BpA0%2F.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0My5wbmc=/original/ikUsal.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0Ni5wbmc=/original/CkiZT%2B.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0NS5wbmc=/original/qS596a.png",
+        "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0Ny5wbmc=/original/Cxul%2Fx.png"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Once Upon A Dungeon",
+      "date": "January 2021",
+      "logo": "/images/Logos/Once Upon A Dungeon.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "once-upon-a-dungeon",
+      "description": "This is my first 2D game I made all by myself on Unity. It was a really fun and challenging experience. I am sure I can make a better game now but this title stands as a milestone of my progress!",
+      "youtubeEmbed": "https://www.youtube.com/embed/lx_AGp_IBQE",
+      "itchEmbed": "https://itch.io/embed/1272418?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTc0Mi5wbmc=/original/C2vUDs.png",
+        "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTc0MS5wbmc=/original/Ezlshh.png",
+        "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTczOS5wbmc=/original/9r5Jn6.png",
+        "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTczNy5wbmc=/original/UpCR9B.png",
+        "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTczOC5wbmc=/original/jG9owI.png",
+        "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTc0MC5wbmc=/original/dY5JV3.png",
+        "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTczNS5wbmc=/original/xM%2F3M2.png"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Chrome Dino Game",
+      "date": "March 2020",
+      "logo": "/images/Logos/Chrome Dino Game.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "chrome-dino-game",
+      "description": "It's exactly as the name states, my attempt on recreating the famous Chrome dinosaur game. Looking back, I really struggled to developed this since I was still a rookie in Unity 2d. But I am proud of the output!",
+      "youtubeEmbed": "https://www.youtube.com/embed/Fw7uPgsWG14",
+      "itchEmbed": "https://itch.io/embed/1850603?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTg1MDYwMy8xNjY4MTk0OC5wbmc=/original/i7Lnbs.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDYwMy8xNjY4MTk0Ni5wbmc=/original/0EUxpT.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDYwMy8xNjY4MTk0Ny5wbmc=/original/RDQiuB.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDYwMy8xNjY4MTk0NC5wbmc=/original/tB4qHU.png"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Will To Survive",
+      "date": "May 2022",
+      "logo": "/images/Logos/Will To Survive.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "will-to-survive",
+      "description": "With full confidence, I can say that this was the first 'High Quality' game I made. This is my first 3d game on Unity. It was very challenging since I had to research and learn a lot while developing. I am very proud of this game since I finally made something from my favourite genres; Zombies and FPS! It comprises of AI, FPS mechanics like movement, shooting, weapon changing, different weapons etc. ",
+      "youtubeEmbed": "https://www.youtube.com/embed/PJJ8pFijBtU",
+      "itchEmbed": "https://itch.io/embed/1693123?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUxOC5wbmc=/original/OgacOL.png",
+        "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUyMC5wbmc=/original/0X4hSJ.png",
+        "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUxOS5wbmc=/original/7oPO4T.png",
+        "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUyMy5wbmc=/original/mfTCsv.png",
+        "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUyMi5wbmc=/original/EVpQYe.png",
+        "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUyMS5wbmc=/original/GtSRGZ.png"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Endless Runner",
+      "date": "December 2020",
+      "logo": "/images/Logos/Endless Runner.avif",
+      "engine": ["Stencyl"],
+      "platforms": ["Web"],
+      "slug": "endless-runner",
+      "description": "This was the first ever full-fledged game I made using Stencyl. It's not much but it was a really proud moment for me since I made my own game for the first time!",
+      "youtubeEmbed": "",
+      "itchEmbed": "https://itch.io/embed/922544?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "RUN!",
+      "date": "October 2021",
+      "logo": "/images/Logos/RUN!.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "run",
+      "description": "While I was working on the game above, I decided to participate in a Game Jam whose theme was 'Unstable'. I teamed up with a friend who worked on the visual aspect of the game while I worked on the mechanics and put everything together. The time crunch surely gave me an amazing challenge. This was also made on Unity.",
+      "youtubeEmbed": "https://www.youtube.com/embed/mkLZB3plkEc",
+      "itchEmbed": "https://itch.io/embed/1223016?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxNS5wbmc=/original/0HPURy.png",
+        "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxMy5wbmc=/original/ZuLzDZ.png",
+        "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxNC5wbmc=/original/hG%2Bvue.png",
+        "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxNi5wbmc=/original/wxiq2%2F.png",
+        "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxNy5wbmc=/original/FNXBMk.png"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Grav Switcher",
+      "date": "November 2021",
+      "logo": "/images/Logos/Grav Switcher.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "grav-switcher",
+      "description": "Playing with gravity seemed like an interesting concept back when I just started learning Unity 2d. As a result of that curiosity, I ended up making this simple yet decently fun-to-play game. This was also the era when I learnt about Parallax Backgrounds, Scene Management and adding background music!",
+      "youtubeEmbed": "https://www.youtube.com/embed/vYUVvxdkBGo",
+      "itchEmbed": "https://itch.io/embed/1839923?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg3Ni5wbmc=/original/%2BlsIaI.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg3Ny5wbmc=/original/mZSKWq.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg4MC5wbmc=/original/rMrRkC.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg3OC5wbmc=/original/JtiwPB.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg3OS5wbmc=/original/ytr3jH.png"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "RASH DASH",
+      "date": "January 2022",
+      "logo": "/images/Logos/RASH DASH.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "rash-dash",
+      "description": "After playing Celeste, I had a keen interest in the dash mechanics it used. As a result of that, I ended up making this small low-effort game which infuses basic platformer mechanics with the dash mechanics and random level generation. I am quite proud of it despite of its quality.",
+      "youtubeEmbed": "https://www.youtube.com/embed/5sn9eVJ_9gA",
+      "itchEmbed": "https://itch.io/embed/1839923?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0OC5wbmc=/original/1hHNq%2F.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0NC5wbmc=/original/ZEQ%2BGu.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0NS5wbmc=/original/Eaiw3f.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0Ni5wbmc=/original/XEE2PH.png",
+        "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0Ny5wbmc=/original/YL%2BURr.png"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Space Race",
+      "date": "February 2021",
+      "logo": "/images/Logos/Space Race.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "space-race",
+      "description": "This is another one of those games I made back in my beginner days. This is the period where I learnt how to change the value of a variable over time and about the basics of Unity Particle System. The gameplay aspect of this title is extremely simple but it does tend to become a challenge the longer you play. ",
+      "youtubeEmbed": "https://www.youtube.com/embed/SGuaSCpJkUc",
+      "itchEmbed": "https://itch.io/embed/1850552?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3My5wbmc=/original/C0wZeC.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3MS5wbmc=/original/IQ6p49.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3NC5wbmc=/original/C6KzBd.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3NS5wbmc=/original/43eNqn.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3Mi5wbmc=/original/sE9wmP.png"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Invasion of the Greenz",
+      "date": "February 2021",
+      "logo": "/images/Logos/Invasion of the Greenz.avif",
+      "engine": ["Unity", "C#"],
+      "platforms": ["PC"],
+      "slug": "invasion-of-the-greenz",
+      "description": "This is a game I made in my early Unity 2d days. The main concept is based off of the asteroid shooter games. The game art is very goofy but this was just me trying to make my own pixel art. Well, there is of course room for improvement.",
+      "youtubeEmbed": "https://www.youtube.com/embed/6XXcA0iVlRY",
+      "itchEmbed": "https://itch.io/embed/1850279?bg_color=747474&amp;fg_color=FFE400&amp;link_color=FF652F&amp;border_color=14A76C",
+      "steamLink": "",
+      "githubLink": "",
+      "playstoreLink": "",
+      "screenshots": [
+        "https://img.itch.zone/aW1hZ2UvMTg1MDI3OS8xNjY4MTc3OS5wbmc=/original/Uk%2F2NU.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDI3OS8xNjY4MTc4MC5wbmc=/original/%2FHAFd8.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDI3OS8xNjY4MTc3Ny5wbmc=/original/Qe2f%2Fc.png",
+        "https://img.itch.zone/aW1hZ2UvMTg1MDI3OS8xNjY4MTc3OC5wbmc=/original/w5WjnB.png"
+      ]
     }
   ]  
