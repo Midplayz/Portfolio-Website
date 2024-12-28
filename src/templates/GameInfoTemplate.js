@@ -72,6 +72,23 @@ const GameInfoTemplate = ({ data }) => {
           </div>
         )}
 
+        {/* Itch.io Embed */}
+        {project.itchEmbed && (
+          <div className="embed itch-embed">
+            <iframe
+              src={project.itchEmbed}
+              title="Itch.io Game"
+              style={{
+                border: "1px solid #14A76C",
+                width: "100%",
+                maxWidth: "554px",
+                height: "169px",
+              }}
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
+
         {/* Steam Embed */}
         {project.steamLink && (
           <div className="embed steam-embed">
@@ -90,20 +107,21 @@ const GameInfoTemplate = ({ data }) => {
           </div>
         )}
 
-        {/* Itch.io Embed */}
-        {project.itchEmbed && (
-          <div className="embed itch-embed">
-            <iframe
-              src={project.itchEmbed}
-              title="Itch.io Game"
-              style={{
-                border: "1px solid #14A76C",
-                width: "100%",
-                maxWidth: "554px",
-                height: "169px",
-              }}
-              allowFullScreen
-            ></iframe>
+        {/* Playstore Embed */}
+        {project.playstoreLink && (
+          <div className="embed playstore-embed">
+            <a
+              href={project.playstoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="playstore-badge"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play Badge"
+                className="playstore-badge-image"
+              />
+            </a>
           </div>
         )}
 
@@ -120,24 +138,6 @@ const GameInfoTemplate = ({ data }) => {
                 src="https://badgen.net/badge/Available%20on/GitHub/black?icon=github"
                 alt="Available on GitHub"
                 className="github-badge-image"
-              />
-            </a>
-          </div>
-        )}
-
-        {/* Playtore Embed */}
-        {project.playstoreLink && (
-          <div className="embed playstore-embed">
-            <a
-              href={project.playstoreLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="playstore-badge"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Google Play Badge"
-                className="playstore-badge-image"
               />
             </a>
           </div>
