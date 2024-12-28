@@ -29,8 +29,8 @@ const GameInfoTemplate = ({ data }) => {
             src={project.youtubeEmbed}
             title="YouTube Video"
             style={{
-              border: "none", // Removes the border
-              width: "100%",  // Makes it responsive
+              border: "none", 
+              width: "100%",  
               maxWidth: "800px",
               aspectRatio: "16 / 9",
             }}
@@ -84,15 +84,18 @@ const GameInfoTemplate = ({ data }) => {
         {/* Itch.io Embed */}
         {project.itchEmbed && (
           <div className="embed itch-embed">
-            <iframe
-              src={project.itchEmbed}
-              title="Itch.io Game"
-              frameBorder="0"
-              width="552"
-              height="167"
-              allowFullScreen
-            ></iframe>
-          </div>
+          <iframe
+            src={project.itchEmbed}
+            title="Itch.io Game"
+            style={{
+              border: "1px solid #14A76C",
+              width: "100%",
+              maxWidth: "554px", // Match the original embed size
+              height: "169px", // Match the original height
+            }}
+            allowFullScreen
+          ></iframe>
+        </div>
         )}
 
         {/* GitHub Embed */}
