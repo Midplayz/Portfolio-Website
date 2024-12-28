@@ -1,18 +1,32 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+const path = require("path");
 
-/**
- * @type {import('gatsby').GatsbyNode['createPages']}
- */
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
-}
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
+
+  const gameTemplate = path.resolve("src/templates/GameInfoTemplate.js");
+
+  const result = await graphql(`
+    {
+      allProjectsJson {
+        nodes {
+          slug
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    reporter.panicOnBuild("Error loading project data", result.errors);
+    return;
+  }
+
+  result.data.allProjectsJson.nodes.forEach((project) => {
+    createPage({
+      path: `/projects/${project.slug}`,
+      component: gameTemplate,
+      context: {
+        slug: project.slug,
+      },
+    });
+  });
+};

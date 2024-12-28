@@ -24,6 +24,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/projects.json`, // Path to your JSON file
+      },
+    },
+    `gatsby-transformer-json`,
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Poppins:400,600,700`],

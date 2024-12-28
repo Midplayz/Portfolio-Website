@@ -4,8 +4,24 @@
       "name": "vaXinator",
       "date": "November 2024",
       "logo": "/images/Logos/vaXinator.png",
-      "engine": ["Godot", "GDScript"],
-      "platforms": ["PC"]
+      "engine": [
+        "Godot",
+        "GDScript"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "slug": "vaXinator",
+      "description": "vaXinator is a chaotic roguelike...",
+      "youtubeEmbed": "https://www.youtube.com/embed/EkXzKFOqx4M",
+      "itchEmbed": "https://midplayz.itch.io/card-quest",
+      "steamLink": "https://store.steampowered.com/app/3214380/vaXinator/",
+      "githubLink": "https://github.com/Midplayz/CardQuest",
+      "playstoreLink": "https://play.google.com/store/apps/details?id=com.devsisters.ck&pcampaignid=web_share",
+      "screenshots": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_0083b40d655dfec9cb8ea96435154c27d4626be5.600x338.jpg?t=1731605498",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_04d4316d98523522842c9f47ed72a8ec5b4446f6.600x338.jpg?t=1731605498"
+      ]
     },
     {
       "id": 2,

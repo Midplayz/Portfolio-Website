@@ -106,7 +106,7 @@ const ProjectsPage = () => {
                       ))}
                     </div>
                   </div>
-                  <a href="#" className="view-more">View More</a>
+                  <a href={`/projects/${project.slug}`} className="view-more">Learn More</a>
                 </div>
               ))}
             </div>
