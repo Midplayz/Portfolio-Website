@@ -13,14 +13,17 @@
       ],
       "slug": "vaXinator",
       "description": "Defend the body in vaXinator, a fast-paced action roguelike! As the last white blood cell, unleash powerful abilities and antibodies to fight off waves of infections. Test your reflexes in this microscopic battle for survival. How long can you hold the line?",
-      "youtubeEmbed": "https://www.youtube.com/embed/EkXzKFOqx4M",
-      "itchEmbed": "https://itch.io/embed/2768773?border_width=0&bg_color=747474&fg_color=FFE400&link_color=FF652F&border_color=14A76C",
+      "youtubeEmbed": "https://www.youtube.com/embed/L190UWL934c",
+      "itchEmbed": "",
       "steamLink": "https://store.steampowered.com/app/3214380/vaXinator/",
-      "githubLink": "https://github.com/Midplayz/CardQuest",
-      "playstoreLink": "https://play.google.com/store/apps/details?id=com.devsisters.ck&pcampaignid=web_share",
+      "githubLink": "",
+      "playstoreLink": "",
       "screenshots": [
         "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_0083b40d655dfec9cb8ea96435154c27d4626be5.600x338.jpg?t=1731605498",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_04d4316d98523522842c9f47ed72a8ec5b4446f6.600x338.jpg?t=1731605498"
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_04d4316d98523522842c9f47ed72a8ec5b4446f6.600x338.jpg?t=1731605498",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_5fc287d63fe95fd5dcb46642519a8939aa6659e1.600x338.jpg?t=1731605498",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_6a3d754c82bb88f87452d74550a3ab47d7bc7b54.600x338.jpg?t=1731605498",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_e500792e13372bd1cd973377fe2f6b327604822c.600x338.jpg?t=1731605498"
       ]
     },
     {

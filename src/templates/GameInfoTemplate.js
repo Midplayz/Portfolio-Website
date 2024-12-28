@@ -1,5 +1,5 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React, { useState, useEffect, useRef } from "react";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import "./game-info.css";
 import Carousel from "react-multi-carousel";
@@ -7,10 +7,14 @@ import "react-multi-carousel/lib/styles.css";
 
 const GameInfoTemplate = ({ data }) => {
   const project = data.allProjectsJson.nodes[0];
+  const [currentSlide, setCurrentSlide] = useState(0); 
+  const [autoPlay, setAutoPlay] = useState(true); 
+  const [isYouTubeApiReady, setIsYouTubeApiReady] = useState(false); 
+  const carouselRef = useRef(null);
 
   const carouselSettings = {
     infinite: true,
-    autoPlay: true,
+    autoPlay: autoPlay,
     autoPlaySpeed: 3000,
     arrows: true,
     slidesToSlide: 1,
@@ -19,32 +23,79 @@ const GameInfoTemplate = ({ data }) => {
       tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
       mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
     },
+    afterChange: (currentSlideIndex) => {
+      setCurrentSlide(currentSlideIndex); 
+    },
   };
 
   const mediaContent = [
     ...(project.youtubeEmbed
       ? [
-        <iframe
-          key="youtube"
-          src={project.youtubeEmbed}
-          title="YouTube Video"
-          style={{
-            border: "none",
-            width: "100%",
-            maxWidth: "800px",
-            aspectRatio: "16 / 9",
-          }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>,
-      ]
+          <iframe
+            key="youtube"
+            src={`${project.youtubeEmbed}?enablejsapi=1&autoplay=1`}
+            title="YouTube Video"
+            style={{
+              border: "none",
+              width: "100%",
+              maxWidth: "800px",
+              aspectRatio: "16 / 9",
+            }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            ref={(iframe) => {
+              if (iframe && currentSlide === 0 && isYouTubeApiReady) {
+                setupYouTubeEvents(iframe);
+              }
+            }}
+          ></iframe>,
+        ]
       : []),
     ...(project.screenshots
       ? project.screenshots.map((src, idx) => (
-        <img key={`screenshot-${idx}`} src={src} alt={`${project.name} screenshot ${idx + 1}`} />
-      ))
+          <img
+            key={`screenshot-${idx}`}
+            src={src}
+            alt={`${project.name} screenshot ${idx + 1}`}
+            onLoad={() => setAutoPlay(true)}
+          />
+        ))
       : []),
   ];
+
+  const setupYouTubeEvents = (iframe) => {
+    const player = new window.YT.Player(iframe, {
+      events: {
+        onStateChange: (event) => {
+          if (event.data === 1) {
+            setAutoPlay(false); 
+          } else if (event.data === 0) {
+            carouselRef.current.goToSlide(currentSlide + 1);
+            setAutoPlay(true); 
+          }
+        },
+      },
+    });
+  };
+
+  useEffect(() => {
+    if (!window.YT) {
+      const script = document.createElement("script");
+      script.src = "https://www.youtube.com/iframe_api";
+      script.async = true;
+      document.body.appendChild(script);
+
+      window.onYouTubeIframeAPIReady = () => {
+        setIsYouTubeApiReady(true);
+      };
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    } else {
+      setIsYouTubeApiReady(true);
+    }
+  }, []);
 
   return (
     <Layout>
@@ -55,7 +106,7 @@ const GameInfoTemplate = ({ data }) => {
         {/* Carousel for Media */}
         {mediaContent.length > 0 && (
           <div className="media-carousel">
-            <Carousel {...carouselSettings}>
+            <Carousel ref={carouselRef} {...carouselSettings}>
               {mediaContent.map((item, index) => (
                 <div key={index} className="carousel-item">
                   {item}
@@ -148,7 +199,7 @@ const GameInfoTemplate = ({ data }) => {
 };
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     allProjectsJson(filter: { slug: { eq: $slug } }) {
       nodes {
         name
