@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "srivishnu-portfolio",
+  "private": false,
+  "description": "Srivishnu's Portfolio Website where all projects are showcased along with information about me.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Srivishnu Srinivasan <midnightassassinmc@gmail.com>",
   "dependencies": {
     "gatsby": "^5.14.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
