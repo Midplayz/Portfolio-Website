@@ -1,0 +1,165 @@
+/* General Styling */
+.about-page {
+    color: #ffffff;
+    background-color: #272727;
+    padding: 20px;
+  }
+  
+  /* Alternating Backgrounds */
+  .alt-bg {
+    background-color: #383838;
+  }
+  
+  /* Header Section */
+  .header-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #272727;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffe400;
+  }
+  
+  .header-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #747474;
+    margin-top: 10px;
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto;
+  }  
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }  
+  
+  .about-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffe400;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #747474;
+  }
+  
+  .about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff652f;
+  }
+  
+  .stat p {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  /* Goals Section */
+  .goals-section {
+    padding: 40px 20px;
+    background-color: #272727;
+    border: 2px solid #747474;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .goals-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffe400;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .goals-list {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    list-style: none; 
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px; 
+  }
+  
+  .goal-item {
+    background-color: #383838;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .goal-item:hover {
+    transform: scale(1.05);
+    background-color: #14a76c;
+  }
+  
+  .goal-item::before {
+    content: "✓"; 
+    color: #ffe400;
+    font-weight: bold;
+    margin-right: 10px;
+  }  
+  
+  /* Vision Section */
+  .vision-section {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+  }
+  
+  .vision-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffe400;
+    margin-bottom: 20px;
+  }
+  
+  .vision-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #747474;
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto; 
+  }  
+  
+  .highlight {
+    color: #ff652f;
+    font-weight: bold;
+  }
+  
