@@ -176,3 +176,27 @@
   text-align: left;
   width: 100%;
 }
+
+.download-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #FF652F;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #FFE400;
+  color: #272727;
+  transform: scale(1.05);
+}
