@@ -16,66 +16,67 @@ const ResumePage = () => {
           </a>
         </p>
         <p>Phone: {resumeData.contact.phone}</p>
-        <p>
-          Portfolio:{" "}
-          <a
-            href={resumeData.contact.portfolio}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {resumeData.contact.portfolio}
-          </a>
-        </p>
       </div>
 
-      {resumeData.sections.map((section, index) => (
-        <div key={index} className="resume-section">
-          <h2>{section.title}</h2>
-          <ul>
-            {section.items.map((item, itemIndex) => {
-              if (typeof item === "string") {
-                return <li key={itemIndex}>{item}</li>;
-              }
-              if (item.link) {
-                return (
-                  <li key={itemIndex}>
-                    {item.title} -{" "}
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.provider}
-                    </a>
-                  </li>
-                );
-              }
-              return (
-                <li key={itemIndex}>
-                  <strong>{item.role || item.degree}</strong>
-                  {item.company && <span>{item.company}</span>}
-                  <br />
-                  {item.location && <span>{item.location}</span>}
-                  <br />
-                  {item.duration && <span>{item.duration}</span>}
-                  {item.description && <p>{item.description}</p>}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      ))}
-
-      <div className="resume-footer">
-        Designed, Developed, and Maintained by{" "}
-        <a
-          href={resumeData.contact.portfolio}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {resumeData.name}
-        </a>
+      {resumeData.sections.map((section, index) => {
+  if (section.title === "Experience") {
+    return (
+      <div key={index} className="resume-section experience-section">
+        <h2>{section.title}</h2>
+        <ul>
+          {section.items.map((item, itemIndex) => (
+            <li key={itemIndex}>
+              <strong>{item.role}</strong>
+              <span className="company">{item.company}</span>
+              <div className="details">
+                <span>{item.duration}</span>
+                <span>• {item.location}</span>
+              </div>
+              {item.description && <p>{item.description}</p>}
+            </li>
+          ))}
+        </ul>
       </div>
+    );
+  }
+  return (
+    <div key={index} className="resume-section">
+      <h2>{section.title}</h2>
+      <ul>
+        {section.items.map((item, itemIndex) => {
+          if (typeof item === "string") {
+            return <li key={itemIndex}>{item}</li>;
+          }
+          if (item.link) {
+            return (
+              <li key={itemIndex}>
+                {item.title} -{" "}
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.provider}
+                </a>
+              </li>
+            );
+          }
+          return (
+            <li key={itemIndex}>
+              <strong>{item.role || item.degree}</strong>
+              {item.company && <span>{item.company}</span>}
+              <br />
+              {item.location && <span>{item.location}</span>}
+              <br />
+              {item.duration && <span>{item.duration}</span>}
+              {item.description && <p>{item.description}</p>}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+})}
     </div>
   );
 };

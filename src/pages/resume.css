@@ -31,8 +31,8 @@
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Ensures all content is horizontally centered */
-    gap: 0.5rem; /* Adds spacing between each item */
+    align-items: center; 
+    gap: 0.5rem; 
   }
   
   .contact p {
@@ -87,11 +87,11 @@
   }
 
   .resume-section ul li + li {
-    margin-top: 1.5rem; /* Adds space between items */
+    margin-top: 1.5rem; 
   }
 
   .resume-section ul li:last-child::after {
-    display: none; /* Remove the divider after the last item */
+    display: none; 
   }
   
   .resume-section ul li a {
@@ -101,8 +101,8 @@
   }
   
   .resume-section ul li:hover {
-    background-color: #3a3a3a; /* Slightly lighter background on hover */
-    transform: scale(1.02); /* Add a subtle hover effect */
+    background-color: #3a3a3a; 
+    transform: scale(1.02); 
     transition: all 0.2s ease;
   }
   
@@ -129,3 +129,50 @@
     text-decoration: underline;
   }
   
+  /* Experience Section */
+.experience-section ul li {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #E5E5E5;
+  background-color: #2d2d2d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #3a3a3a;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.experience-section ul li strong {
+  font-size: 1.2rem;
+  color: #14A76C;
+  display: block;
+}
+
+.experience-section ul li .company {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #FFE400;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
+.experience-section ul li .details {
+  font-size: 0.85rem;
+  color: #B3B3B3;
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.experience-section ul li p {
+  font-size: 0.95rem;
+  color: #B3B3B3;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
