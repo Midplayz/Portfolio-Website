@@ -9,6 +9,12 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setTimeout(() => {
+      setMenuOpen(false);
+    }, 100); 
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">Srivishnu</div>
@@ -19,22 +25,22 @@ const Navbar = () => {
 
       <ul className={`navbar-links ${menuOpen ? "mobile-menu" : ""}`}>
         <li>
-          <Link to="/" activeClassName="active-link">
+          <Link to="/" activeClassName="active-link" onClick={closeMenu}>
             Home
           </Link>
         </li>
         <li>
-          <Link to="/about" activeClassName="active-link">
+          <Link to="/about" activeClassName="active-link" onClick={closeMenu}>
             About
           </Link>
         </li>
         <li>
-          <Link to="/projects" activeClassName="active-link">
+          <Link to="/projects" activeClassName="active-link" onClick={closeMenu}>
             Projects
           </Link>
         </li>
         <li>
-          <Link to="/coming-soon" activeClassName="active-link">
+          <Link to="/coming-soon" activeClassName="active-link" onClick={closeMenu}>
             Resume
           </Link>
         </li>

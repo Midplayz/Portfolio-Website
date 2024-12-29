@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import "./game-info.css";
 import Carousel from "react-multi-carousel";
@@ -98,7 +98,6 @@ const GameInfoTemplate = ({ data }) => {
   }, []);
 
   return (
-    <Layout>
       <div className="game-info-page">
         <h1>{project.name}</h1>
         <p className="date">{project.date}</p>
@@ -194,7 +193,6 @@ const GameInfoTemplate = ({ data }) => {
           </div>
         )}
       </div>
-    </Layout>
   );
 };
 

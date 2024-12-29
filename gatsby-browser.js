@@ -4,4 +4,12 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
  */
 
-// You can delete this file if you're not using it
+import React from "react";
+import { AnimatePresence } from "framer-motion";
+import Layout from "./src/components/Layout";
+
+export const wrapPageElement = ({ element, props }) => (
+  <AnimatePresence mode="wait" initial={false}>
+    <Layout {...props}>{element}</Layout>
+  </AnimatePresence>
+);

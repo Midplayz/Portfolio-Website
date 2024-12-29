@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import "./styles.css";
 
 const HomePage = () => (
-  <Layout>
     <div className="homepage">
       {/* Hero Section */}
       <main className="hero-section">
@@ -41,7 +40,6 @@ const HomePage = () => (
         </div>
       </section>
     </div>
-  </Layout>
 );
 
 export default HomePage;

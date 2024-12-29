@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import "./about.css";
 
 const AboutPage = () => (
-  <Layout>
     <div className="about-page">
       {/* Header Section */}
       <section className="header-section">
@@ -69,7 +68,6 @@ const AboutPage = () => (
         </p>
       </section>
     </div>
-  </Layout>
 );
 
 export default AboutPage;

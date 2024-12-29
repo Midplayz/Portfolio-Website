@@ -3,7 +3,6 @@ import "./coming-soon.css";
 import Layout from "../components/Layout";
 
 const ComingSoonPage = () => (
-  <Layout>
   <div className="coming-soon-page">
     <div className="content">
       <h1 className="title">Coming Soon</h1>
@@ -13,7 +12,6 @@ const ComingSoonPage = () => (
       </div>
     </div>
   </div>
-  </Layout>
 );
 
 export default ComingSoonPage;

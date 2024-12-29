@@ -5,7 +5,6 @@ import Seo from "../components/seo";
 import "./404.css";
 
 const NotFoundPage = () => (
-  <Layout>
     <div className="not-found-page">
       <div className="error-container">
         <h1>404</h1>
@@ -19,7 +18,6 @@ const NotFoundPage = () => (
         </Link>
       </div>
     </div>
-  </Layout>
 );
 
 export const Head = () => <Seo title="404: Not Found" />;
