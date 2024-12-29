@@ -260,7 +260,7 @@ pre tt:after {
 }
 
 .Layout {
-  overflow: hidden; /* Prevent layout shifting during transitions */
+  overflow: hidden; 
 }
 
 main {

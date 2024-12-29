@@ -40,7 +40,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/coming-soon" activeClassName="active-link" onClick={closeMenu}>
+          <Link to="/resume" activeClassName="active-link" onClick={closeMenu}>
             Resume
           </Link>
         </li>

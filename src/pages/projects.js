@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
 import projectData from "../data/projects.json";
 import "./projects.css";
 

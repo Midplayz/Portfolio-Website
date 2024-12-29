@@ -1,0 +1,137 @@
+{
+    "name": "Srivishnu Srinivasan",
+    "about": "I am a Unity and C# game developer who creates immersive experiences and smart AI games. I have built complex apps for iOS and Android, always pushing the limits and aiming to make a big impact in game development.",
+    "contact": {
+      "email": "srivishnusrinivasan13@gmail.com",
+      "phone": "+91 7200890513",
+      "portfolio": "https://midnightassassinmc.wixsite.com/srivishnu"
+    },
+    "sections": [
+      {
+        "title": "Experience",
+        "items": [
+          {
+            "role": "Junior Unity Game Developer",
+            "company": "Whizzy Ants Digital",
+            "location": "Bangalore, India",
+            "duration": "Feb 2023 - April 2024",
+            "description": "Mobile Game Development Studio where I successfully made and published 5 games/apps on the Play Store and the App Store."
+          },
+          {
+            "role": "Game Developer I",
+            "company": "Anonvision Creative Labs Pvt Ltd",
+            "location": "Mumbai, Maharashtra, India",
+            "duration": "July 2024 - Current",
+            "description": "A Studio that develops games and softwares for various platforms. I was hired as a Game Developer but I have also indulges in website development as well as the design and Game Design Document creation aspects of the development cycles!"
+          }
+        ]
+      },
+      {
+        "title": "Education",
+        "items": [
+          {
+            "degree": "BSC. in Game Design & Development",
+            "company": "ICAT Design & Media College",
+            "location": "Chennai, India",
+            "duration": "2020-2023"
+          },
+          {
+            "degree": "MSC. in Game Technology",
+            "company": "ICAT Design & Media College",
+            "location": "Chennai, India",
+            "duration": "2024-2026"
+          }
+        ]
+      },
+      {
+        "title": "Certifications",
+        "items": [
+          {
+            "title": "Unity tutorial from scratch till infinity",
+            "provider": "Udemy",
+            "link": "https://www.udemy.com/certificate/UC-0acae74e-6ca8-4fe4-b818-150e4d89836b/"
+          },
+          {
+            "title": "Complete Python 2024 For Absolute Beginners",
+            "provider": "Udemy",
+            "link": "https://www.udemy.com/certificate/UC-5480f094-fce6-422b-928c-34b1a02f1680/"
+          },
+          {
+            "title": "Complete C# Unity Game Developer 3D",
+            "provider": "Udemy",
+            "link": "https://www.udemy.com/certificate/UC-07576914-f039-40a9-86c3-27b9113d2c3a/"
+          },
+          {
+            "title": "Python for Data Science, AI & Development",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/BYD24VADK8W6"
+          },
+          {
+            "title": "Introduction to Software Engineering",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/AQY5MACKRS62"
+          },
+          {
+            "title": "Introduction to HTML, CSS, & JavaScript",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/4Y9RCA2MAQVZ"
+          },
+          {
+            "title": "Introduction to Artificial Intelligence (AI)",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/2MZSAB8DMYUC"
+          },
+          {
+            "title": "Generative AI: Prompt Engineering Basics",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/SUAKEUHEERTL"
+          },
+          {
+            "title": "Generative AI: Introduction and Applications",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/HZBPW37UREJB"
+          },
+          {
+            "title": "Software Developer Career Guide and Interview Preparation",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/5FEW5H6P7RZE"
+          },
+          {
+            "title": "Generative AI: Elevate your Software Development Career",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/MAWP436JXPDA"
+          },
+          {
+            "title": "Developing AI Applications with Python and Flask",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/9HRQKMU2CA6W"
+          },
+          {
+            "title": "Building Generative AI-Powered Applications with Python",
+            "provider": "IBM",
+            "link": "https://www.coursera.org/account/accomplishments/records/KEJCY3ZCNVQB"
+          }
+        ]
+      },
+      {
+        "title": "Expertise",
+        "items": [
+          "Unity & C# Development",
+          "ML integration in Games",
+          "Mobile App Development",
+          "Innovative game design",
+          "Immersive gaming experiences",
+          "Bug hunting and fixing",
+          "Teamwork and leadership"
+        ]
+      },
+      {
+        "title": "Languages",
+        "items": [
+          "English",
+          "Hindi",
+          "Tamil"
+        ]
+      }
+    ]
+  }  
