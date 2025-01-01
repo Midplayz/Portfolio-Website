@@ -1,6 +1,5 @@
 import React from "react";
 import "./coming-soon.css";
-import Layout from "../components/Layout";
 
 const ComingSoonPage = () => (
   <div className="coming-soon-page">
