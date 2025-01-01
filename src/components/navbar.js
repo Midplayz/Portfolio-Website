@@ -17,7 +17,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Srivishnu</div>
+       <Link to="/coming-soon" className="navbar-logo">
+        Srivishnu
+      </Link>
 
       <div className="burger-icon" onClick={toggleMenu}>
         {menuOpen ? "✖" : "☰"} 
