@@ -231,3 +231,35 @@ a {
     margin: 20px auto; 
   }
 }
+
+ /* Scroll to top */
+ .scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff652f;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #ffe400;
+  color: #000;
+}
+
+.scroll-to-top svg {
+  width: 24px;
+  height: 24px;
+}
+
