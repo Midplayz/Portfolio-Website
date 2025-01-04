@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "name": "Wooooo",
+        "date": "No Nut 2024",
+        "logo": "/images/logos/vaXinator.avif",
+        "engine": [
+          "Godot",
+          "GDScript"
+        ],
+        "platforms": [
+          "PC"
+        ],
+        "slug": "vaXinator",
+        "description": "The first game I worked on using the Open Source Engine, Godot 4.0. And this is also the first game I worked on to be published on Steam! It was a very interesting and lucrative experience as I learnt how to use the popular Godot Engine. It also taught me how to integrate Steam SDK!",
+        "youtubeEmbed": "",
+        "itchEmbed": "",
+        "steamLink": "",
+        "githubLink": "",
+        "playstoreLink": "",
+        "screenshots": [
+          "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_0083b40d655dfec9cb8ea96435154c27d4626be5.600x338.jpg?t=1731605498"
+        ]
+      }
+]

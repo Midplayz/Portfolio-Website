@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import projectData from "../data/projects.json";
+import gamesData from "../data/projects.json";
+import othersData from "../data/others.json";
 import "./projects.css";
 
 const ProjectsPage = () => {
@@ -9,7 +10,13 @@ const ProjectsPage = () => {
 
   const itemsPerPage = 20;
 
-  const filteredProjects = projectData.filter((project) => {
+  const [projects, setProjects] = useState(gamesData);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [projects]);
+
+  const filteredProjects = projects.filter((project) => {
     if (filters.engine.length && !filters.engine.some((e) => project.engine.includes(e))) return false;
     if (filters.platform.length && !filters.platform.some((p) => project.platforms.includes(p))) return false;
     return true;
@@ -134,7 +141,23 @@ const ProjectsPage = () => {
         {/* Projects Grid */}
         <section className="projects">
           <h1>My Projects</h1>
-          <div className="projects-grid">
+          <div className="segment-toggle">
+            <div
+              className={`toggle-item ${projects === gamesData ? "active" : ""}`}
+              onClick={() => setProjects(gamesData)}
+            >
+              <span>Games</span>
+              {projects === gamesData && <div className="divider"></div>}
+            </div>
+            <div
+              className={`toggle-item ${projects === othersData ? "active" : ""}`}
+              onClick={() => setProjects(othersData)}
+            >
+              <span>Others</span>
+              {projects === othersData && <div className="divider"></div>}
+            </div>
+          </div>
+          <div className={`projects-grid animated ${projects === gamesData ? "slide-in-left" : "slide-in-right"}`}>
             {paginatedProjects.map((project) => (
               <div key={project.id} className="project-card">
                 <img src={project.logo} alt={`${project.name} logo`} />
