@@ -24,7 +24,9 @@
         "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_5fc287d63fe95fd5dcb46642519a8939aa6659e1.600x338.jpg?t=1731605498",
         "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_6a3d754c82bb88f87452d74550a3ab47d7bc7b54.600x338.jpg?t=1731605498",
         "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_e500792e13372bd1cd973377fe2f6b327604822c.600x338.jpg?t=1731605498"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 2,
@@ -42,7 +44,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://img.itch.zone/aW1nLzE3MDM5MzU3LnBuZw==/original/hAZoeo.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 3,
@@ -60,7 +64,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 4,
@@ -78,7 +84,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 5,
@@ -96,7 +104,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 6,
@@ -114,7 +124,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 7,
@@ -132,7 +144,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 8,
@@ -150,7 +164,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 9,
@@ -173,7 +189,9 @@
         "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEyOC5wbmc=/original/3KFslo.png",
         "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEzMy5wbmc=/original/y2H1Zq.png",
         "https://img.itch.zone/aW1hZ2UvMjc2ODc3My8xNjY4MjEzMi5wbmc=/original/U3Kf5L.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 10,
@@ -195,7 +213,9 @@
         "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0Ni5wbmc=/original/CkiZT%2B.png",
         "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0NS5wbmc=/original/qS596a.png",
         "https://img.itch.zone/aW1hZ2UvMjc2ODgxMC8xNjY4MjA0Ny5wbmc=/original/Cxul%2Fx.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 11,
@@ -219,7 +239,9 @@
         "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTczOC5wbmc=/original/jG9owI.png",
         "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTc0MC5wbmc=/original/dY5JV3.png",
         "https://img.itch.zone/aW1hZ2UvMTI3MjQxOC8xNjY4MTczNS5wbmc=/original/xM%2F3M2.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 12,
@@ -240,7 +262,9 @@
         "https://img.itch.zone/aW1hZ2UvMTg1MDYwMy8xNjY4MTk0Ni5wbmc=/original/0EUxpT.png",
         "https://img.itch.zone/aW1hZ2UvMTg1MDYwMy8xNjY4MTk0Ny5wbmc=/original/RDQiuB.png",
         "https://img.itch.zone/aW1hZ2UvMTg1MDYwMy8xNjY4MTk0NC5wbmc=/original/tB4qHU.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 13,
@@ -263,7 +287,9 @@
         "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUyMy5wbmc=/original/mfTCsv.png",
         "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUyMi5wbmc=/original/EVpQYe.png",
         "https://img.itch.zone/aW1hZ2UvMTY5MzEyMy8xNjY4MTUyMS5wbmc=/original/GtSRGZ.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 14,
@@ -281,7 +307,9 @@
       "playstoreLink": "",
       "screenshots": [
         "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 15,
@@ -303,7 +331,9 @@
         "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxNC5wbmc=/original/hG%2Bvue.png",
         "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxNi5wbmc=/original/wxiq2%2F.png",
         "https://img.itch.zone/aW1hZ2UvMTIyMzAxNi8xNjY4MTYxNy5wbmc=/original/FNXBMk.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 16,
@@ -325,7 +355,9 @@
         "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg4MC5wbmc=/original/rMrRkC.png",
         "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg3OC5wbmc=/original/JtiwPB.png",
         "https://img.itch.zone/aW1hZ2UvMTgzOTkyMy8xNjY4MTg3OS5wbmc=/original/ytr3jH.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 17,
@@ -347,7 +379,9 @@
         "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0NS5wbmc=/original/Eaiw3f.png",
         "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0Ni5wbmc=/original/XEE2PH.png",
         "https://img.itch.zone/aW1hZ2UvMTgzNzU4NC8xNjY4MTY0Ny5wbmc=/original/YL%2BURr.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 18,
@@ -369,7 +403,9 @@
         "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3NC5wbmc=/original/C6KzBd.png",
         "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3NS5wbmc=/original/43eNqn.png",
         "https://img.itch.zone/aW1hZ2UvMTg1MDU1Mi8xNjY4MTU3Mi5wbmc=/original/sE9wmP.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     },
     {
       "id": 19,
@@ -390,6 +426,8 @@
         "https://img.itch.zone/aW1hZ2UvMTg1MDI3OS8xNjY4MTc4MC5wbmc=/original/%2FHAFd8.png",
         "https://img.itch.zone/aW1hZ2UvMTg1MDI3OS8xNjY4MTc3Ny5wbmc=/original/Qe2f%2Fc.png",
         "https://img.itch.zone/aW1hZ2UvMTg1MDI3OS8xNjY4MTc3OC5wbmc=/original/w5WjnB.png"
-      ]
+      ],
+      "buttonText": "",
+      "buttonUrl": ""
     }
   ]  

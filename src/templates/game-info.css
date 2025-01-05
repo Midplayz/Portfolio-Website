@@ -122,3 +122,28 @@
 .playstore-badge-image:hover {
   transform: scale(1.05); 
 }
+
+.custom-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ff652f;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #ffe400;
+  color: #000000;
+  transform: scale(1.05);
+}

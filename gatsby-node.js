@@ -5,22 +5,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const gameTemplate = path.resolve("src/templates/GameInfoTemplate.js");
 
-  const result = await graphql(`
-    {
-      allProjectsJson {
-        nodes {
-          slug
-        }
-      }
-    }
-  `);
+  const gamesData = require("./src/data/projects.json");
+  const othersData = require("./src/data/others.json");
 
-  if (result.errors) {
-    reporter.panicOnBuild("Error loading project data", result.errors);
-    return;
-  }
+  const allProjects = [...gamesData, ...othersData];
 
-  result.data.allProjectsJson.nodes.forEach((project) => {
+  allProjects.forEach((project) => {
     createPage({
       path: `/projects/${project.slug}`,
       component: gameTemplate,
@@ -43,4 +33,3 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   });
 };
-

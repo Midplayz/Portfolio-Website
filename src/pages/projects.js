@@ -144,19 +144,32 @@ const ProjectsPage = () => {
           <div className="segment-toggle">
             <div
               className={`toggle-item ${projects === gamesData ? "active" : ""}`}
+              role="button"
+              tabIndex="0"
               onClick={() => setProjects(gamesData)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setProjects(gamesData);
+              }}
+              aria-pressed={projects === gamesData}
             >
               <span>Games</span>
               {projects === gamesData && <div className="divider"></div>}
             </div>
             <div
               className={`toggle-item ${projects === othersData ? "active" : ""}`}
+              role="button"
+              tabIndex="0"
               onClick={() => setProjects(othersData)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setProjects(othersData);
+              }}
+              aria-pressed={projects === othersData}
             >
               <span>Others</span>
               {projects === othersData && <div className="divider"></div>}
             </div>
           </div>
+
           <div className={`projects-grid animated ${projects === gamesData ? "slide-in-left" : "slide-in-right"}`}>
             {paginatedProjects.map((project) => (
               <div key={project.id} className="project-card">
@@ -184,6 +197,7 @@ const ProjectsPage = () => {
                 key={idx + 1}
                 onClick={() => setCurrentPage(idx + 1)}
                 className={currentPage === idx + 1 ? "active" : ""}
+                aria-current={currentPage === idx + 1 ? "page" : undefined}
               >
                 {idx + 1}
               </button>
@@ -191,7 +205,11 @@ const ProjectsPage = () => {
           </div>
         </section>
         {showScrollToTop && (
-          <button className="scroll-to-top" onClick={scrollToTop}>
+          <button
+            className="scroll-to-top"
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

@@ -35,12 +35,12 @@ a {
 
 .filters .filter-item {
   display: flex;
-  align-items: center; 
-  margin-bottom: 10px; 
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .filters .filter-item input {
-  margin-right: 10px; 
+  margin-right: 10px;
   accent-color: #FF652F;
 }
 
@@ -66,7 +66,7 @@ a {
   display: flex;
   gap: 20px;
   margin-top: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
 }
 
 .projects {
@@ -93,15 +93,15 @@ a {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   max-width: 600px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .project-card img {
-  width: 100%; 
-  height: auto; 
-  max-width: 250px; 
-  border-radius: 10px; 
-  object-fit: contain; 
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
 /* Project Title */
@@ -123,7 +123,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .tags span {
@@ -151,9 +151,9 @@ a {
 
 /* Pagination Buttons */
 .pagination {
-  display: flex; 
-  justify-content: flex-start; 
-  gap: 10px; 
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -186,54 +186,54 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 100%; 
-    margin: 0; 
-    padding: 0; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   /* Filters Section */
   .filters {
-    width: 90%; 
-    max-width: 400px; 
-    margin: 0 auto; 
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
     text-align: center;
   }
 
   /* Projects Container */
   .projects-container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    width: 100%; 
-    margin: 0 auto; 
-    padding: 0 10px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 
   /* Projects Grid */
   .projects-grid {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px; 
+    grid-template-columns: 1fr;
+    gap: 20px;
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     margin: 0 auto;
   }
 
   /* Project Card */
   .project-card {
-    max-width: 90%; 
-    margin: 0 auto; 
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   /* Pagination */
   .pagination {
-    justify-content: center; 
-    margin: 20px auto; 
+    justify-content: center;
+    margin: 20px auto;
   }
 }
 
- /* Scroll to top */
- .scroll-to-top {
+/* Scroll to top */
+.scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -292,20 +292,16 @@ a {
   opacity: 0.8;
 }
 
-.segment-toggle .divider {
+.segment-toggle .toggle-item.active .divider {
   position: absolute;
   bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 120%;
   height: 3px;
   background-color: #FF652F;
   border-radius: 10px;
   transition: width 0.3s ease-in-out;
-}
-
-.segment-toggle .toggle-item.active .divider {
-  width: 120%;
 }
 
 .segment-toggle .divider {
@@ -351,6 +347,7 @@ a {
     opacity: 0;
     transform: translateX(-100%);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -362,6 +359,7 @@ a {
     opacity: 0;
     transform: translateX(100%);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

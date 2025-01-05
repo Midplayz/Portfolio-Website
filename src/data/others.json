@@ -1,25 +1,50 @@
 [
-    {
-        "id": 1,
-        "name": "Wooooo",
-        "date": "No Nut 2024",
-        "logo": "/images/logos/vaXinator.avif",
-        "engine": [
-          "Godot",
-          "GDScript"
-        ],
-        "platforms": [
-          "PC"
-        ],
-        "slug": "vaXinator",
-        "description": "The first game I worked on using the Open Source Engine, Godot 4.0. And this is also the first game I worked on to be published on Steam! It was a very interesting and lucrative experience as I learnt how to use the popular Godot Engine. It also taught me how to integrate Steam SDK!",
-        "youtubeEmbed": "",
-        "itchEmbed": "",
-        "steamLink": "",
-        "githubLink": "",
-        "playstoreLink": "",
-        "screenshots": [
-          "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3214380/ss_0083b40d655dfec9cb8ea96435154c27d4626be5.600x338.jpg?t=1731605498"
-        ]
-      }
+  {
+    "id": 1,
+    "name": "United Critics Website",
+    "date": "December, 2024",
+    "logo": "/images/logos/UC.jpg",
+    "engine": [
+      "Website"
+    ],
+    "platforms": [
+      "PC", "Mobile"
+    ],
+    "slug": "uc-website",
+    "description": "I made this website for a Sweden-based Game Reviewing company called United Critics. The website is made through Wix. I have made everything end-to-end using the Wix Website Editor along with their Dev Velo Mode. It was purely based on the theme they asked for along with a blog-like feature where they can post their reviews.",
+    "youtubeEmbed": "",
+    "itchEmbed": "",
+    "steamLink": "",
+    "githubLink": "",
+    "playstoreLink": "",
+    "screenshots": [
+      "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+    ],
+    "buttonText": "Website Link",
+    "buttonUrl": "https://www.united-critics.com/"
+  },
+  {
+    "id": 2,
+    "name": "Portfolio Website",
+    "date": "January, 2025",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3b/PlaceholderRoss.png",
+    "engine": [
+      "Website"
+    ],
+    "platforms": [
+      "PC", "Mobile"
+    ],
+    "slug": "portfolio-site",
+    "description": "This is literally this website. I made this website using React with Gatsby. Everything has been made from scratch. I had to learn a lot of things to make this website including React, Gatsby, GraphQL, CSS, and a lot of other things. I have always wanted to make my own website for my portfolio instead of using a website builder so that I can have the flexibility I want. I hosted this website using AWS S3 along with AWS Cloudfront.",
+    "youtubeEmbed": "",
+    "itchEmbed": "",
+    "steamLink": "",
+    "githubLink": "",
+    "playstoreLink": "",
+    "screenshots": [
+      "https://cdn.dribbble.com/users/476251/screenshots/2619255/attachments/523315/placeholder.png"
+    ],
+    "buttonText": "Website Link",
+    "buttonUrl": "http://portfolio-site-srivishnu.s3-website.ap-south-1.amazonaws.com/"
+  }
 ]

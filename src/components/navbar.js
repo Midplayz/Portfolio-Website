@@ -12,17 +12,27 @@ const Navbar = () => {
   const closeMenu = () => {
     setTimeout(() => {
       setMenuOpen(false);
-    }, 100); 
+    }, 100);
   };
 
   return (
     <nav className="navbar">
-       <Link to="/coming-soon" className="navbar-logo">
+      <Link to="/coming-soon" className="navbar-logo">
         Srivishnu
       </Link>
 
-      <div className="burger-icon" onClick={toggleMenu}>
-        {menuOpen ? "✖" : "☰"} 
+      <div
+        className="burger-icon"
+        role="button"
+        tabIndex="0"
+        onClick={toggleMenu}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") toggleMenu();
+        }}
+        aria-expanded={menuOpen}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+      >
+        {menuOpen ? "✖" : "☰"}
       </div>
 
       <ul className={`navbar-links ${menuOpen ? "mobile-menu" : ""}`}>
