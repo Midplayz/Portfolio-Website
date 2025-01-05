@@ -4,7 +4,7 @@
     "name": "United Critics Website",
     "date": "December, 2024",
     "logo": "/images/logos/UC.jpg",
-    "engine": [
+    "type": [
       "Website"
     ],
     "platforms": [
@@ -28,7 +28,7 @@
     "name": "Portfolio Website",
     "date": "January, 2025",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3b/PlaceholderRoss.png",
-    "engine": [
+    "type": [
       "Website"
     ],
     "platforms": [

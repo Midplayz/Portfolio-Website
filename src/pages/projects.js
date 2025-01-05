@@ -4,7 +4,7 @@ import othersData from "../data/others.json";
 import "./projects.css";
 
 const ProjectsPage = () => {
-  const [filters, setFilters] = useState({ engine: [], platform: [] });
+  const [filters, setFilters] = useState({ engine: [], platform: [], type: [] });
   const [currentPage, setCurrentPage] = useState(1);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
@@ -17,10 +17,26 @@ const ProjectsPage = () => {
   }, [projects]);
 
   const filteredProjects = projects.filter((project) => {
-    if (filters.engine.length && !filters.engine.some((e) => project.engine.includes(e))) return false;
-    if (filters.platform.length && !filters.platform.some((p) => project.platforms.includes(p))) return false;
+    if (projects === gamesData) {
+      if (filters.engine.length && !filters.engine.some((e) => project.engine.includes(e))) {
+        return false;
+      }
+      if (filters.platform.length && !filters.platform.some((p) => project.platforms.includes(p))) {
+        return false;
+      }
+    }
+  
+    if (projects === othersData) {
+      if (filters.type.length && !filters.type.some((t) => project.type.includes(t))) {
+        return false;
+      }
+      if (filters.platform.length && !filters.platform.some((p) => project.platforms.includes(p))) {
+        return false;
+      }
+    }
+  
     return true;
-  });
+  });  
 
   const paginatedProjects = filteredProjects.slice(
     (currentPage - 1) * itemsPerPage,
@@ -57,83 +73,137 @@ const ProjectsPage = () => {
         {/* Filters */}
         <aside className="filters">
           <h3>Filters</h3>
-          <div>
-            <h4>Game Engine</h4>
-            <div className="filter-item">
-              <input
-                type="checkbox"
-                id="unity"
-                value="Unity"
-                checked={filters.engine.includes("Unity")}
-                onChange={(e) => handleFilterChange(e, "engine")}
-              />
-              <label htmlFor="unity">Unity</label>
-            </div>
-            <div className="filter-item">
-              <input
-                type="checkbox"
-                id="unreal"
-                value="Unreal Engine"
-                checked={filters.engine.includes("Unreal Engine")}
-                onChange={(e) => handleFilterChange(e, "engine")}
-              />
-              <label htmlFor="unreal">Unreal Engine</label>
-            </div>
-            <div className="filter-item">
-              <input
-                type="checkbox"
-                id="godot"
-                value="Godot"
-                checked={filters.engine.includes("Godot")}
-                onChange={(e) => handleFilterChange(e, "engine")}
-              />
-              <label htmlFor="godot">Godot</label>
-            </div>
-            <div className="filter-item">
-              <input
-                type="checkbox"
-                id="stencyl"
-                value="Stencyl"
-                checked={filters.engine.includes("Stencyl")}
-                onChange={(e) => handleFilterChange(e, "engine")}
-              />
-              <label htmlFor="stencyl">Stencyl</label>
-            </div>
-          </div>
-          <div>
-            <h4>Platform</h4>
-            <div className="filter-item">
-              <input
-                type="checkbox"
-                id="pc"
-                value="PC"
-                checked={filters.platform.includes("PC")}
-                onChange={(e) => handleFilterChange(e, "platform")}
-              />
-              <label htmlFor="pc">PC</label>
-            </div>
-            <div className="filter-item">
-              <input
-                type="checkbox"
-                id="mobile"
-                value="Mobile"
-                checked={filters.platform.includes("Mobile")}
-                onChange={(e) => handleFilterChange(e, "platform")}
-              />
-              <label htmlFor="mobile">Mobile</label>
-            </div>
-            <div className="filter-item">
-              <input
-                type="checkbox"
-                id="web"
-                value="Web"
-                checked={filters.platform.includes("Web")}
-                onChange={(e) => handleFilterChange(e, "platform")}
-              />
-              <label htmlFor="web">Web</label>
-            </div>
-
-          </div>
+          {projects === gamesData ? (
+            <>
+              {/* Filters for Games */}
+              <div>
+                <h4>Game Engine</h4>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="unity"
+                    value="Unity"
+                    checked={filters.engine.includes("Unity")}
+                    onChange={(e) => handleFilterChange(e, "engine")}
+                  />
+                  <label htmlFor="unity">Unity</label>
+                </div>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="unreal"
+                    value="Unreal Engine"
+                    checked={filters.engine.includes("Unreal Engine")}
+                    onChange={(e) => handleFilterChange(e, "engine")}
+                  />
+                  <label htmlFor="unreal">Unreal Engine</label>
+                </div>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="godot"
+                    value="Godot"
+                    checked={filters.engine.includes("Godot")}
+                    onChange={(e) => handleFilterChange(e, "engine")}
+                  />
+                  <label htmlFor="godot">Godot</label>
+                </div>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="stencyl"
+                    value="Stencyl"
+                    checked={filters.engine.includes("Stencyl")}
+                    onChange={(e) => handleFilterChange(e, "engine")}
+                  />
+                  <label htmlFor="stencyl">Stencyl</label>
+                </div>
+              </div>
+              <div>
+                <h4>Platform</h4>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="pc"
+                    value="PC"
+                    checked={filters.platform.includes("PC")}
+                    onChange={(e) => handleFilterChange(e, "platform")}
+                  />
+                  <label htmlFor="pc">PC</label>
+                </div>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="mobile"
+                    value="Mobile"
+                    checked={filters.platform.includes("Mobile")}
+                    onChange={(e) => handleFilterChange(e, "platform")}
+                  />
+                  <label htmlFor="mobile">Mobile</label>
+                </div>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="web"
+                    value="Web"
+                    checked={filters.platform.includes("Web")}
+                    onChange={(e) => handleFilterChange(e, "platform")}
+                  />
+                  <label htmlFor="web">Web</label>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Filters for Others */}
+              <div>
+                <h4>Type</h4>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="app"
+                    value="App"
+                    checked={filters.type && filters.type.includes("App")}
+                    onChange={(e) => handleFilterChange(e, "type")}
+                  />
+                  <label htmlFor="app">App</label>
+                </div>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="website"
+                    value="Website"
+                    checked={filters.type && filters.type.includes("Website")}
+                    onChange={(e) => handleFilterChange(e, "type")}
+                  />
+                  <label htmlFor="website">Website</label>
+                </div>
+              </div>
+              <div>
+                <h4>Platform</h4>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="pc"
+                    value="PC"
+                    checked={filters.platform.includes("PC")}
+                    onChange={(e) => handleFilterChange(e, "platform")}
+                  />
+                  <label htmlFor="pc">PC</label>
+                </div>
+                <div className="filter-item">
+                  <input
+                    type="checkbox"
+                    id="mobile"
+                    value="Mobile"
+                    checked={filters.platform.includes("Mobile")}
+                    onChange={(e) => handleFilterChange(e, "platform")}
+                  />
+                  <label htmlFor="mobile">Mobile</label>
+                </div>
+              </div>
+            </>
+          )}
           <button onClick={clearFilters}>Clear Filters</button>
         </aside>
 
@@ -178,13 +248,17 @@ const ProjectsPage = () => {
                   <h2>{project.name}</h2>
                   <p>{project.date}</p>
                   <div className="tags">
-                    {project.engine.map((e) => (
+                    {projects === gamesData && project.engine && project.engine.map((e) => (
                       <span key={e}>{e}</span>
                     ))}
-                    {project.platforms.map((p) => (
+                    {projects === othersData && project.type && project.type.map((t) => (
+                      <span key={t}>{t}</span>
+                    ))}
+                    {project.platforms && project.platforms.map((p) => (
                       <span key={p}>{p}</span>
                     ))}
                   </div>
+
                 </div>
                 <a href={`/projects/${project.slug}`} className="view-more">Learn More</a>
               </div>
@@ -236,19 +310,22 @@ const ProjectsPage = () => {
     const { value, checked } = e.target;
     setFilters((prev) => {
       const updatedFilters = { ...prev };
+      if (!updatedFilters[filterType]) {
+        updatedFilters[filterType] = []; // Initialize array if it doesn't exist
+      }
       if (checked) {
-        updatedFilters[filterType].push(value);
+        updatedFilters[filterType].push(value); // Add value to filter
       } else {
-        updatedFilters[filterType] = updatedFilters[filterType].filter((f) => f !== value);
+        updatedFilters[filterType] = updatedFilters[filterType].filter((f) => f !== value); // Remove value from filter
       }
       return updatedFilters;
     });
-  }
+  }  
 
   function clearFilters() {
-    setFilters({ engine: [], platform: [] });
+    setFilters({ engine: [], platform: [], type: [] });
     setCurrentPage(1);
-  }
+  }  
 };
 
 export default ProjectsPage;
