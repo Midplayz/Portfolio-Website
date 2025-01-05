@@ -1,0 +1,89 @@
+.fitness-tracker {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .month {
+    width: calc(25% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .month h3 {
+    margin-bottom: 10px;
+  }
+  
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .day {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  
+  .day:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .today {
+    border: 2px solid #000;
+  }
+  
+  .done {
+    background-color: green;
+    color: white;
+  }
+  
+  .break {
+    background-color: blue;
+    color: white;
+  }
+  
+  .missed {
+    background-color: red;
+    color: white;
+  }
+  
+  .date-actions {
+    margin-top: 20px;
+  }
+  
+  .date-actions button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .date-actions button:hover {
+    opacity: 0.8;
+  }
+  
+  .streak-info {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
