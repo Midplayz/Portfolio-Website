@@ -5,10 +5,9 @@ import "./fitness-tracker.css";
 
 const FitnessTracker = () => {
   const [markedDates, setMarkedDates] = useState({});
-  const [today, setToday] = useState(new Date());
-  const [streak, setStreak] = useState(0);
-  const year = 2025;
-  const userId = "user123";
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [streak, setStreak] = useState({ totalGreenDays: 0, totalDaysPassed: 0 });
+  const userId = "srivishnu";
 
   useEffect(() => {
     fetchMarkedDates();
@@ -30,8 +29,10 @@ const FitnessTracker = () => {
     setMarkedDates(data);
   };
 
-  const updateMarkedDate = async (date, status) => {
-    const updatedDates = { ...markedDates, [date]: status };
+  const updateMarkedDate = async (date, currentStatus) => {
+    const nextStatus =
+      currentStatus === "Done" ? "Missed" : currentStatus === "Missed" ? "Break" : "Done";
+    const updatedDates = { ...markedDates, [date]: nextStatus };
     setMarkedDates(updatedDates);
 
     const docRef = doc(db, "fitness-tracker", userId);
@@ -41,19 +42,36 @@ const FitnessTracker = () => {
   const calculateStreak = () => {
     let currentStreak = 0;
     let totalGreenDays = 0;
-    const todayDate = today.toISOString().split("T")[0];
-    Object.entries(markedDates).forEach(([date, status]) => {
-      if (status === "Done") totalGreenDays++;
-      if (status === "Done" || status === "Break") {
-        if (date <= todayDate) currentStreak++;
-      } else if (date <= todayDate) {
+    const todayDate = new Date().toISOString().split("T")[0];
+
+    const sortedDates = Object.entries(markedDates).sort(([a], [b]) => new Date(a) - new Date(b));
+
+    for (const [date, status] of sortedDates) {
+      if (new Date(date) > new Date(todayDate)) {
+        continue;
+      }
+
+      if (status === "Done") {
+        totalGreenDays++;
+        currentStreak++;
+      } else if (status === "Break") {
+        continue;
+      } else if (status === "Missed") {
         currentStreak = 0;
       }
+    }
+
+    const totalDaysPassed = sortedDates.filter(([date]) => new Date(date) <= new Date(todayDate))
+      .length;
+
+    setStreak({
+      currentStreak,
+      totalGreenDays,
+      totalDaysPassed,
     });
-    setStreak({ totalGreenDays, totalDaysPassed: Object.keys(markedDates).length });
   };
 
-  const getDaysInMonth = (month) => {
+  const getDaysInMonth = (year, month) => {
     const days = [];
     const date = new Date(year, month, 1);
     while (date.getMonth() === month) {
@@ -63,38 +81,53 @@ const FitnessTracker = () => {
     return days;
   };
 
+  const handlePreviousMonth = () => {
+    const newDate = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
+    setCurrentDate(newDate);
+  };
+
+  const handleNextMonth = () => {
+    const newDate = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
+    setCurrentDate(newDate);
+  };
+
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
+
   return (
     <div className="fitness-tracker">
       <h1>Fitness Tracker</h1>
+      <div className="calendar-navigation">
+        <button onClick={handlePreviousMonth} disabled={currentMonth === 0 && currentYear === 2025}>
+          &lt;
+        </button>
+        <h2>{currentDate.toLocaleString("default", { month: "long", year: "numeric" })}</h2>
+        <button
+          onClick={handleNextMonth}
+        >
+          &gt;
+        </button>
+      </div>
       <div className="calendar">
-        {[...Array(12).keys()].map((month) => (
-          <div key={month} className="month">
-            <h3>{new Date(year, month).toLocaleString("default", { month: "long" })}</h3>
-            <div className="days">
-              {getDaysInMonth(month).map((date) => {
-                const dateKey = date.toISOString().split("T")[0];
-                const isToday = dateKey === today.toISOString().split("T")[0];
-                const status = markedDates[dateKey];
-                return (
-                  <div
-                    key={dateKey}
-                    className={`day ${isToday ? "today" : ""} ${status ? status.toLowerCase() : ""}`}
-                    onClick={() =>
-                      new Date(dateKey) <= today &&
-                      updateMarkedDate(dateKey, status === "Done" ? "Missed" : "Done")
-                    }
-                  >
-                    {date.getDate()}
-                  </div>
-                );
-              })}
+        {getDaysInMonth(currentYear, currentMonth).map((date) => {
+          const dateKey = date.toISOString().split("T")[0];
+          const isToday = date.toDateString() === new Date().toDateString();
+          const status = markedDates[dateKey];
+          return (
+            <div
+              key={dateKey}
+              className={`day ${isToday ? "today" : ""} ${status ? status.toLowerCase() : ""}`}
+              onClick={() => date <= new Date() && updateMarkedDate(dateKey, status)}
+            >
+              {date.getDate()}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="streak-info">
-        <h3>Streak: {streak.totalGreenDays}/{streak.totalDaysPassed}</h3>
+        <h3>Current Streak: {streak.currentStreak}</h3>
+        <h3>Total Done: {streak.totalGreenDays}/{streak.totalDaysPassed}</h3>
       </div>
     </div>
   );
