@@ -5,8 +5,11 @@ import "./fitness-tracker.css";
 
 const FitnessTracker = () => {
   const [markedDates, setMarkedDates] = useState({});
+  const [weightData, setWeightData] = useState({});
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [streak, setStreak] = useState({ totalGreenDays: 0, totalDaysPassed: 0 });
+  const [streak, setStreak] = useState({ currentStreak: 0, totalGreenDays: 0, totalDaysPassed: 0 });
+  const [startingWeight, setStartingWeight] = useState(null);
+  const [currentWeight, setCurrentWeight] = useState(null);
   const userId = "srivishnu";
 
   useEffect(() => {
@@ -15,7 +18,8 @@ const FitnessTracker = () => {
 
   useEffect(() => {
     calculateStreak();
-  }, [markedDates]);
+    calculateWeightInfo();
+  }, [markedDates, weightData]);
 
   const fetchMarkedDates = async () => {
     const collectionRef = collection(db, "fitness-tracker");
@@ -26,7 +30,8 @@ const FitnessTracker = () => {
         Object.assign(data, doc.data());
       }
     });
-    setMarkedDates(data);
+    setMarkedDates(data.markedDates || {});
+    setWeightData(data.weightData || {});
   };
 
   const updateMarkedDate = async (date, currentStatus) => {
@@ -36,7 +41,18 @@ const FitnessTracker = () => {
     setMarkedDates(updatedDates);
 
     const docRef = doc(db, "fitness-tracker", userId);
-    await setDoc(docRef, updatedDates, { merge: true });
+    await setDoc(docRef, { markedDates: updatedDates }, { merge: true });
+  };
+
+  const logWeight = async (date) => {
+    const weight = prompt("Enter your weight for this day:");
+    if (weight && !isNaN(weight)) {
+      const updatedWeightData = { ...weightData, [date]: parseFloat(weight) };
+      setWeightData(updatedWeightData);
+
+      const docRef = doc(db, "fitness-tracker", userId);
+      await setDoc(docRef, { weightData: updatedWeightData }, { merge: true });
+    }
   };
 
   const calculateStreak = () => {
@@ -71,6 +87,17 @@ const FitnessTracker = () => {
     });
   };
 
+  const calculateWeightInfo = () => {
+    const weights = Object.values(weightData);
+    if (weights.length > 0) {
+      setStartingWeight(weights[0]);
+      setCurrentWeight(weights[weights.length - 1]);
+    } else {
+      setStartingWeight(null);
+      setCurrentWeight(null);
+    }
+  };
+
   const getDaysInMonth = (year, month) => {
     const days = [];
     const date = new Date(year, month, 1);
@@ -98,15 +125,9 @@ const FitnessTracker = () => {
     <div className="fitness-tracker">
       <h1>Fitness Tracker</h1>
       <div className="calendar-navigation">
-        <button onClick={handlePreviousMonth} disabled={currentMonth === 0 && currentYear === 2025}>
-          &lt;
-        </button>
+        <button onClick={handlePreviousMonth}>&lt;</button>
         <h2>{currentDate.toLocaleString("default", { month: "long", year: "numeric" })}</h2>
-        <button
-          onClick={handleNextMonth}
-        >
-          &gt;
-        </button>
+        <button onClick={handleNextMonth}>&gt;</button>
       </div>
       <div className="calendar">
         {getDaysInMonth(currentYear, currentMonth).map((date) => {
@@ -117,17 +138,40 @@ const FitnessTracker = () => {
             <div
               key={dateKey}
               className={`day ${isToday ? "today" : ""} ${status ? status.toLowerCase() : ""}`}
-              onClick={() => date <= new Date() && updateMarkedDate(dateKey, status)}
+              onClick={() => {
+                if (date <= new Date()) updateMarkedDate(dateKey, status);
+              }}
             >
-              {date.getDate()}
+              <span>{date.getDate()}</span>
+              {status === "Done" && (
+                <div className="log-weight-container">
+                  <button
+                    className="log-weight-button"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent status change
+                      logWeight(dateKey);
+                    }}
+                    aria-label="Log Weight"
+                  >
+                    ➕
+                  </button>
+                </div>
+              )}
             </div>
-          );
+          );          
         })}
       </div>
 
       <div className="streak-info">
         <h3>Current Streak: {streak.currentStreak}</h3>
         <h3>Total Done: {streak.totalGreenDays}/{streak.totalDaysPassed}</h3>
+        {startingWeight !== null && currentWeight !== null && (
+          <>
+            <h3>Starting Weight: {startingWeight} kg</h3>
+            <h3>Current Weight: {currentWeight} kg</h3>
+            <h3>Weight Difference: {(currentWeight - startingWeight).toFixed(1)} kg</h3>
+          </>
+        )}
       </div>
     </div>
   );
