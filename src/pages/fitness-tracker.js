@@ -11,6 +11,11 @@ const FitnessTracker = () => {
   const [startingWeight, setStartingWeight] = useState(null);
   const [currentWeight, setCurrentWeight] = useState(null);
   const userId = "srivishnu";
+  const [showWeights, setShowWeights] = useState(false);
+
+  const toggleWeightVisibility = () => {
+    setShowWeights((prev) => !prev);
+  };
 
   useEffect(() => {
     fetchMarkedDates();
@@ -37,15 +42,22 @@ const FitnessTracker = () => {
   const updateMarkedDate = async (date, currentStatus) => {
     const nextStatus =
       currentStatus === "Done" ? "Missed" : currentStatus === "Missed" ? "Break" : "Done";
+
     const updatedDates = { ...markedDates, [date]: nextStatus };
-    setMarkedDates(updatedDates);
+    setMarkedDates({});
+    setTimeout(() => setMarkedDates(updatedDates), 0);
 
     const docRef = doc(db, "fitness-tracker", userId);
     await setDoc(docRef, { markedDates: updatedDates }, { merge: true });
   };
 
   const logWeight = async (date) => {
-    const weight = prompt("Enter your weight for this day:");
+    const currentWeightForDate = weightData[date] || "";
+    const weight = prompt(
+      `Enter your weight for ${date} (Current Weight: ${currentWeightForDate || "Not Logged"}):`,
+      currentWeightForDate
+    );
+
     if (weight && !isNaN(weight)) {
       const updatedWeightData = { ...weightData, [date]: parseFloat(weight) };
       setWeightData(updatedWeightData);
@@ -141,6 +153,10 @@ const FitnessTracker = () => {
               onClick={() => {
                 if (date <= new Date()) updateMarkedDate(dateKey, status);
               }}
+              onTouchStart={(e) => {
+                e.stopPropagation();
+                if (date <= new Date()) updateMarkedDate(dateKey, status);
+              }}
             >
               <span>{date.getDate()}</span>
               {status === "Done" && (
@@ -148,7 +164,7 @@ const FitnessTracker = () => {
                   <button
                     className="log-weight-button"
                     onClick={(e) => {
-                      e.stopPropagation(); // Prevent status change
+                      e.stopPropagation();
                       logWeight(dateKey);
                     }}
                     aria-label="Log Weight"
@@ -158,7 +174,7 @@ const FitnessTracker = () => {
                 </div>
               )}
             </div>
-          );          
+          );
         })}
       </div>
 
@@ -167,9 +183,29 @@ const FitnessTracker = () => {
         <h3>Total Done: {streak.totalGreenDays}/{streak.totalDaysPassed}</h3>
         {startingWeight !== null && currentWeight !== null && (
           <>
-            <h3>Starting Weight: {startingWeight} kg</h3>
-            <h3>Current Weight: {currentWeight} kg</h3>
-            <h3>Weight Difference: {(currentWeight - startingWeight).toFixed(1)} kg</h3>
+            <div className="weight-info">
+              <h3>
+                Starting Weight:{" "}
+                {showWeights ? `${startingWeight} kg` : "****"}
+              </h3>
+              <h3>
+                Current Weight:{" "}
+                {showWeights ? `${currentWeight} kg` : "****"}
+              </h3>
+              <h3>
+                Weight Difference:{" "}
+                {showWeights
+                  ? `${(currentWeight - startingWeight).toFixed(1)} kg`
+                  : "****"}
+              </h3>
+              <button
+                className="visibility-toggle"
+                onClick={toggleWeightVisibility}
+                aria-label="Toggle Weight Visibility"
+              >
+                {showWeights ? "👁️" : "🙈"}
+              </button>
+            </div>
           </>
         )}
       </div>

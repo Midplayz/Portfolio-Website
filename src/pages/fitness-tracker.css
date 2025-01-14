@@ -87,6 +87,7 @@
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 
 .log-weight-container {
@@ -119,4 +120,32 @@
 
 .day {
   position: relative;
+}
+
+.weight-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  gap: 10px;
+}
+
+.visibility-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ff652f;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.visibility-toggle:hover {
+  color: #ffa500;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .day:hover {
+    background-color: unset;
+  }
 }

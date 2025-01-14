@@ -311,12 +311,12 @@ const ProjectsPage = () => {
     setFilters((prev) => {
       const updatedFilters = { ...prev };
       if (!updatedFilters[filterType]) {
-        updatedFilters[filterType] = []; // Initialize array if it doesn't exist
+        updatedFilters[filterType] = []; 
       }
       if (checked) {
-        updatedFilters[filterType].push(value); // Add value to filter
+        updatedFilters[filterType].push(value); 
       } else {
-        updatedFilters[filterType] = updatedFilters[filterType].filter((f) => f !== value); // Remove value from filter
+        updatedFilters[filterType] = updatedFilters[filterType].filter((f) => f !== value); 
       }
       return updatedFilters;
     });
