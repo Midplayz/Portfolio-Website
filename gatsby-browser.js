@@ -6,7 +6,7 @@
 
 import React from "react";
 import { AnimatePresence } from "framer-motion";
-import Layout from "./src/components/layout";
+import Layout from "./src/components/Layout";
 
 export const wrapPageElement = ({ element, props }) => (
   <AnimatePresence mode="wait" initial={false}>
